@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import "./Components.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -20,38 +20,41 @@ const Login = () => {
   };
 
   return (
-    <div className="form-container">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <h6>Enter your E-mail</h6>
-        <input
-          className="form-control"
-          type="email"
-          placeholder="Enter Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+    <div className="login-container d-flex justify-content-center align-items-center vh-200 bg-light">
+      <div className="form-container">
+        <h2 className="login-heading">Login</h2>
         <br />
-        <h6>Enter password</h6>
-        <input
-          className="form-control"
-          type="password"
-          placeholder="Enter Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <br />
-        <h6>Who you are?</h6>
-        <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="tenant">Tenant</option>
-          <option value="owner">Owner</option>
-        </select>
-        <br />
-        <br />
-        <button className="btn btn-success" type="submit">
-          Login
-        </button>
-      </form>
+        <form onSubmit={handleSubmit}>
+          <h6>Enter your E-mail</h6>
+          <input
+            className="form-control"
+            type="email"
+            placeholder="Enter Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <br />
+          <h6>Enter password</h6>
+          <input
+            className="form-control"
+            type="password"
+            placeholder="Enter Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <br />
+          <h6>Who you are?</h6>
+          <select value={role} onChange={(e) => setRole(e.target.value)}>
+            <option value="tenant">Tenant</option>
+            <option value="owner">Owner</option>
+          </select>
+          <br />
+          <br />
+          <button className="btn btn-success login-btn" type="submit">
+            Login
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

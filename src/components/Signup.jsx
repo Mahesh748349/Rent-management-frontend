@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Components.css";
 
 const Signup = () => {
   const [form, setForm] = useState({
@@ -19,47 +20,50 @@ const Signup = () => {
   };
 
   return (
-    <div className="form-container">
-      <h2>Signup</h2>
-      <form onSubmit={handleSubmit}>
-        <h6>Enter Your Name</h6>
-        <input
-          className="form-control"
-          name="name"
-          placeholder="Name"
-          onChange={handleChange}
-        />
+    <div className="d-flex justify-content-center  vh-100 bg-light">
+      <div className="form-container">
+        <h2 className="signup-heading">Signup</h2>
         <br />
-        <h6>Enter Your Email</h6>
-        <input
-          className="form-control"
-          name="email"
-          placeholder="Email"
-          onChange={handleChange}
-        />
-        <br />
+        <form onSubmit={handleSubmit}>
+          <h6>Enter Your Name</h6>
+          <input
+            className="form-control"
+            name="name"
+            placeholder="Name"
+            onChange={handleChange}
+          />
+          <br />
+          <h6>Enter Your Email</h6>
+          <input
+            className="form-control"
+            name="email"
+            placeholder="Email"
+            onChange={handleChange}
+          />
+          <br />
 
-        <h6>Enter password</h6>
-        <input
-          className="form-control"
-          name="password"
-          type="password"
-          placeholder="Password"
-          onChange={handleChange}
-        />
+          <h6>Enter password</h6>
+          <input
+            className="form-control"
+            name="password"
+            type="password"
+            placeholder="Password"
+            onChange={handleChange}
+          />
 
-        <br />
-        <h6>Who are you?</h6>
-        <select name="role" onChange={handleChange}>
-          <option value="tenant">Tenant</option>
-          <option value="owner">Owner</option>
-        </select>
-        <br />
-        <br />
-        <button className="btn btn-success" type="submit">
-          Signup
-        </button>
-      </form>
+          <br />
+          <h6>Who are you?</h6>
+          <select name="role" onChange={handleChange}>
+            <option value="tenant">Tenant</option>
+            <option value="owner">Owner</option>
+          </select>
+          <br />
+          <br />
+          <button className="btn btn-success signup-btn" type="submit">
+            Signup
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
