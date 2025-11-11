@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+}
+
+.navbar {
+  background: #4a90e2;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.form-container {
+  margin: 2rem auto;
+  width: 300px;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+input,
+select,
+button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.dashboard {
+  margin: 2rem;
+}
+
+.rent-card {
+  background: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #ccc;
+}
