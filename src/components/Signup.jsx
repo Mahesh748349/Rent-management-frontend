@@ -38,7 +38,7 @@ const Signup = () => {
           onChange={handleChange}
         />
         <br />
-        <br />
+
         <h6>Enter password</h6>
         <input
           className="form-control"
@@ -47,7 +47,7 @@ const Signup = () => {
           placeholder="Password"
           onChange={handleChange}
         />
-        <br />
+
         <br />
         <h6>Who are you?</h6>
         <select name="role" onChange={handleChange}>
@@ -56,7 +56,7 @@ const Signup = () => {
         </select>
         <br />
         <br />
-        <button class="btn btn-success" type="submit">
+        <button className="btn btn-success" type="submit">
           Signup
         </button>
       </form>
