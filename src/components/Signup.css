@@ -8,6 +8,10 @@
   align-items: center;
   font-family: "Poppins", sans-serif;
 }
+.signup-page {
+  background: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1470&q=80")
+    no-repeat center center/cover;
+}
 
 .auth-box {
   background: rgba(255, 255, 255, 0.2);

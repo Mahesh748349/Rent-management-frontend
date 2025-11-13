@@ -25,7 +25,7 @@
   white-space: nowrap; /* keeps text on one line */
   border-right: 3px solid #fff; /* cursor effect */
   width: 0;
-  animation: typing 6s steps(30, end) forwards, blink 0.75s step-end infinite;
+  animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -58,7 +58,7 @@
   align-items: center;
   justify-content: center;
   color: rgb(186, 215, 159);
-  animation: fadeIn 4s ease-in-out;
+  animation: fadeIn 3s ease-in-out;
 }
 
 @keyframes fadeIn {

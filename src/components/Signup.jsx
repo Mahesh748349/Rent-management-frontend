@@ -4,7 +4,13 @@ import "./Signup.css"; // You can keep same CSS used for login page
 
 const Signup = () => {
   return (
-    <div className="auth-container">
+    <div
+      className="auth-container"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1470&q=80')",
+      }}
+    >
       <div className="auth-box">
         <h2>Create an Account</h2>
         <p className="subtitle">
