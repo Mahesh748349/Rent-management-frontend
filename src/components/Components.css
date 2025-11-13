@@ -12,3 +12,8 @@
 .signup-btn {
   width: 200px !important;
 }
+.login-container {
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
+}

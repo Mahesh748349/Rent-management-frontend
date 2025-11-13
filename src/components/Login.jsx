@@ -20,7 +20,7 @@ const Login = () => {
   };
 
   return (
-    <div className="login-container d-flex justify-content-center align-items-center vh-200 bg-light">
+    <div className="d-flex justify-content-center align-items-center vh-200 bg-light login-container">
       <div className="form-container">
         <h2 className="login-heading">Login</h2>
         <br />
@@ -50,7 +50,7 @@ const Login = () => {
           </select>
           <br />
           <br />
-          <button className="btn btn-success login-btn" type="submit">
+          <button className="btn btn-primary login-btn" type="submit">
             Login
           </button>
         </form>

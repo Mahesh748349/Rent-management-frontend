@@ -59,7 +59,7 @@ const Signup = () => {
           </select>
           <br />
           <br />
-          <button className="btn btn-success signup-btn" type="submit">
+          <button className="btn btn-primary signup-btn" type="submit">
             Signup
           </button>
         </form>
