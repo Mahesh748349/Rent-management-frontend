@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
 .login-heading {
   text-align: center;
 }
@@ -12,8 +14,58 @@
 .signup-btn {
   width: 200px !important;
 }
-.login-container {
+/* .login-container {
   height: 100%;
   width: 100%;
-  background-color: aqua;
+  
+} */
+.home-container h1 {
+  font-size: 2.3rem;
+  overflow: hidden; /* hides text until it “types” */
+  white-space: nowrap; /* keeps text on one line */
+  border-right: 3px solid #fff; /* cursor effect */
+  width: 0;
+  animation: typing 6s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.font-style {
+  font-family: "Momo Trust Display", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.home-container {
+  background: url("https://images.unsplash.com/photo-1730125477357-03a906bde005?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(186, 215, 159);
+  animation: fadeIn 4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

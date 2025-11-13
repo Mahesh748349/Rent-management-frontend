@@ -1,68 +1,57 @@
-import React, { useState } from "react";
-import "./Components.css";
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Signup.css"; // You can keep same CSS used for login page
 
 const Signup = () => {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    password: "",
-    role: "tenant",
-  });
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Signup Data:", form);
-    alert("Signup successful! (Connect backend later)");
-  };
-
   return (
-    <div className="d-flex justify-content-center  vh-100 bg-light">
-      <div className="form-container">
-        <h2 className="signup-heading">Signup</h2>
-        <br />
-        <form onSubmit={handleSubmit}>
-          <h6>Enter Your Name</h6>
-          <input
-            className="form-control"
-            name="name"
-            placeholder="Name"
-            onChange={handleChange}
-          />
-          <br />
-          <h6>Enter Your Email</h6>
-          <input
-            className="form-control"
-            name="email"
-            placeholder="Email"
-            onChange={handleChange}
-          />
-          <br />
+    <div className="auth-container">
+      <div className="auth-box">
+        <h2>Create an Account</h2>
+        <p className="subtitle">
+          Join SmartRent and manage your properties effortlessly 🏘️
+        </p>
 
-          <h6>Enter password</h6>
-          <input
-            className="form-control"
-            name="password"
-            type="password"
-            placeholder="Password"
-            onChange={handleChange}
-          />
+        <form className="auth-form">
+          <div className="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" required />
+          </div>
 
-          <br />
-          <h6>Who are you?</h6>
-          <select name="role" onChange={handleChange}>
-            <option value="tenant">Tenant</option>
-            <option value="owner">Owner</option>
-          </select>
-          <br />
-          <br />
-          <button className="btn btn-primary signup-btn" type="submit">
-            Signup
+          <div className="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" required />
+          </div>
+
+          <div className="input-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter phone number" />
+          </div>
+
+          <div className="input-group">
+            <label>Password</label>
+            <input type="password" placeholder="Create a password" required />
+          </div>
+
+          <div className="input-group">
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              placeholder="Re-enter your password"
+              required
+            />
+          </div>
+
+          <button type="submit" className="auth-btn">
+            Sign Up
           </button>
         </form>
+
+        <p className="footer-text">
+          Already have an account?{" "}
+          <Link to="/login" className="auth-link">
+            Login here
+          </Link>
+        </p>
       </div>
     </div>
   );

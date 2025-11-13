@@ -6,11 +6,11 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
       <div className="container">
         {/* Brand / Home link */}
         <Link className="navbar-brand fw-bold fs-3" to="/">
-          🏠 RentEase
+          🏠 Smart Rent Manager
         </Link>
 
         {/* Navbar toggler for small screens */}
@@ -31,23 +31,25 @@ const Navbar = () => {
           className="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
-          <ul className="navbar-nav">
-            <li className="nav-item mx-2">
-              <Link className="nav-link" to="/">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item mx-2">
-              <Link className="btn btn-primary" to="/login">
-                Login
-              </Link>
-            </li>
-            <li className="nav-item mx-2">
-              <Link className="btn btn-outline-light" to="/signup">
-                Signup
-              </Link>
-            </li>
-          </ul>
+          <div className="navbar-nav d-flex flex-row gap-3">
+            <ul className="navbar-nav">
+              <li className="nav-item mx-2">
+                <Link className="nav-link nav-btn" to="/">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item mx-2">
+                <Link className="btn btn-primary nav-btn" to="/login">
+                  Login
+                </Link>
+              </li>
+              <li className="nav-item mx-2">
+                <Link className="btn btn-outline-light nav-btn" to="/signup">
+                  Signup
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

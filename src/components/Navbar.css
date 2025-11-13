@@ -18,3 +18,9 @@
 .navbar a:hover {
   text-decoration: underline;
 }
+.nav-btn {
+  /* margin: 10px; */
+  display: flex;
+  margin: 5px;
+  gap: 15px;
+}
